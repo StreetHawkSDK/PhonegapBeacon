@@ -12,6 +12,12 @@
 		<hook type="after_plugin_install" src="src/ios/Script/enable_feature.js" />
 		<hook type="before_plugin_uninstall" src="src/ios/Script/disable_feature.js" />
 		
+		<!-- Plugin native SDK -->
+        <header-file src="src/ios/SDK/Beacon/Private/SHBeaconBridge.h" />
+        <source-file src="src/ios/SDK/Beacon/Private/SHBeaconBridge.m" />
+        <header-file src="src/ios/SDK/Beacon/Private/SHBeaconStatus.h" />
+        <source-file src="src/ios/SDK/Beacon/Private/SHBeaconStatus.m" />
+		
 	</platform>
 	
 	<platform name="android">
