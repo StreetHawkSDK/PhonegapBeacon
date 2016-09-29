@@ -2,7 +2,7 @@
 <plugin id="com.streethawk.beacon" version="1.8.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android">
 	<name>StreetHawkBeacon</name>
-	<description> StreetHawk SDK plugin for running beacon based camapigns</description>	    
+	<description>StreetHawk SDK plugin for running beacon based camapigns</description>
     <license>Apache 2.0</license>
     <keywords>push,messaging,deeplinking,referral,analytics,geofencing,beacons,marketing,automation,organic growth,feeds</keywords>
 	
