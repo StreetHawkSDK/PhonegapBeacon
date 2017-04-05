@@ -21,12 +21,16 @@
 	</platform>
 	
 	<platform name="android">
-		<config-file parent="/*" target="res/xml/config.xml">
+	
+        <config-file parent="/*" target="res/xml/config.xml">
 			<feature name="beacon">
 				<param name="android-package" value="com.streethawk.beacon.beacon"/>
 			</feature>
 		</config-file>
-		<config-file parent="/*" target="AndroidManifest.xml"></config-file>
+		
+        <framework src="com.streethawk.phonegap:beacon:1.8.5" />
+        
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
 		<config-file parent="/manifest" target="AndroidManifest.xml">
     		<uses-permission android:name="android.permission.BLUETOOTH" />
     		<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -62,7 +66,8 @@
             </intent-filter>
         </receiver>
 		</config-file>
-		<source-file src="src/android/streethawkbeacon.jar" target-dir="libs/"/> 
+    
+        <source-file src="src/android/BeaconWrapper.java" target-dir="src/com/streethawk" />
 	</platform>
 	<info>
 	 StreetHawk Beacon plugin depends on StreetHawk core plugin. 

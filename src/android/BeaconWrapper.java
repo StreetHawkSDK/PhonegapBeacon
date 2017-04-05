@@ -1,4 +1,4 @@
-package com.streethawk.beacon
+package com.streethawk.beacon;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
@@ -11,9 +11,11 @@ import org.json.JSONObject;
 import android.util.Log;
 import android.os.IBinder;
 import android.content.Context;
+import com.streethawk.library.beacon.Beacons;
 import com.streethawk.library.beacon.INotifyBeaconTransition;
 import com.streethawk.library.beacon.BeaconData;
 import android.app.Activity;
+import java.util.ArrayList;
 
 public class BeaconWrapper extends Service implements INotifyBeaconTransition{
     
@@ -41,12 +43,13 @@ public class BeaconWrapper extends Service implements INotifyBeaconTransition{
 		shNotifyBeaconDetectedCallback = cb;
         if(null==activity)
             return;
-        Intent intent = new Intent(actvity,BeaconWrapper.class);
+        Intent intent = new Intent(activity,BeaconWrapper.class);
         Context context = activity.getApplicationContext();
         context.startService(intent);
         Beacons.getInstance(context).registerForBeaconStatus(this);
 	}
     
+
     @Override
     public void notifyBeaconDetected() {
         ArrayList<BeaconData> beacons = Beacons.getInstance(this).getDetectedBeaconList();
