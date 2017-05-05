@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="com.streethawk.beacon" version="1.8.4" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+<plugin id="com.streethawk.beacon" version="1.8.7" xmlns="http://apache.org/cordova/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android">
 	<name>StreetHawkBeacon</name>
 	<description>StreetHawk SDK plugin for running beacon based camapigns</description>
@@ -7,11 +7,10 @@
     <keywords>push,messaging,deeplinking,referral,analytics,geofencing,beacons,marketing,automation,organic growth,feeds</keywords>
 	
 	<platform name="ios">
-		
 		<!-- Enable preprocessor macro SH_FEATURE_IBEACON -->
 		<hook type="after_plugin_install" src="src/ios/Script/enable_feature.js" />
 		<hook type="before_plugin_uninstall" src="src/ios/Script/disable_feature.js" />
-		
+	
 		<!-- Plugin native SDK -->
         <header-file src="src/ios/SDK/Beacon/Private/SHBeaconBridge.h" />
         <source-file src="src/ios/SDK/Beacon/Private/SHBeaconBridge.m" />
@@ -19,9 +18,7 @@
         <source-file src="src/ios/SDK/Beacon/Private/SHBeaconStatus.m" />
 		
 	</platform>
-	
 	<platform name="android">
-	
         <config-file parent="/*" target="res/xml/config.xml">
 			<feature name="beacon">
 				<param name="android-package" value="com.streethawk.beacon.beacon"/>
