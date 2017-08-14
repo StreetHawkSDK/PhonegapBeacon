@@ -25,8 +25,7 @@
 			</feature>
 		</config-file>
 		
-        <framework src="com.streethawk.phonegap:beacon:1.8.5" />
-        
+        <framework src="src/android/beacon.gradle" custom="true" type="gradleReference" />
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
 		<config-file parent="/manifest" target="AndroidManifest.xml">
     		<uses-permission android:name="android.permission.BLUETOOTH" />
