@@ -7,11 +7,10 @@
     <keywords>push,messaging,deeplinking,referral,analytics,geofencing,beacons,marketing,automation,organic growth,feeds</keywords>
 	
 	<platform name="ios">
-		
 		<!-- Enable preprocessor macro SH_FEATURE_IBEACON -->
 		<hook type="after_plugin_install" src="src/ios/Script/enable_feature.js" />
 		<hook type="before_plugin_uninstall" src="src/ios/Script/disable_feature.js" />
-		
+	
 		<!-- Plugin native SDK -->
         <header-file src="src/ios/SDK/Beacon/Private/SHBeaconBridge.h" />
         <source-file src="src/ios/SDK/Beacon/Private/SHBeaconBridge.m" />
@@ -19,17 +18,14 @@
         <source-file src="src/ios/SDK/Beacon/Private/SHBeaconStatus.m" />
 		
 	</platform>
-	
 	<platform name="android">
-	
         <config-file parent="/*" target="res/xml/config.xml">
 			<feature name="beacon">
 				<param name="android-package" value="com.streethawk.beacon.beacon"/>
 			</feature>
 		</config-file>
 		
-        <framework src="com.streethawk.phonegap:beacon:1.8.5" />
-        
+        <framework src="src/android/beacon.gradle" custom="true" type="gradleReference" />
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
 		<config-file parent="/manifest" target="AndroidManifest.xml">
     		<uses-permission android:name="android.permission.BLUETOOTH" />
