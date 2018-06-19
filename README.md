@@ -17,7 +17,7 @@ cordova plugin add streethawkanalytics  --variable APP_KEY=<YOUR_APPLICATIONS_AP
 Replace YOUR_APPLICATIONS_APP_KEY with app_key registered with StreetHawk for your application and URL_SCHEME_OF_APP with deeplinking scheme of your application.
 
 ## Documentation
-Click [here](https://streethawk.freshdesk.com/solution/articles/5000680139) for detailed documentation of StreetHawk's Beacon plugin.
+Click [here](https://dashboard.streethawk.com/docs/sdks/phonegap/beacon/) for detailed documentation of StreetHawk's Beacon plugin.
 
 ## Other StreetHawk Plugins
 
